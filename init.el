@@ -116,7 +116,7 @@
   '(add-to-list 'company-backends 'company-irony)) ; backend追加
 
 ;(require 'py-autopep8)
-(define-key python-mode-map (kbd "C-c F") 'py-autopep8) ; バッファ全体のコード整形
+;(define-key python-mode-map (kbd "C-c F") 'py-autopep8) ; バッファ全体のコード整形
 ;(define-key python-mode-map (kbd "C-c f") 'py-autopep8-region) ; 選択リジョン内のコード整形
 
 ;; 保存時にバッファ全体を自動整形する
