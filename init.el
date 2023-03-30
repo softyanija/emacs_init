@@ -83,13 +83,13 @@
       (set-face-attribute 'default nil :font "UbuntuMono-26")
     (set-face-attribute 'default nil :font "UbuntuMono-14")))
 
-(add-to-list 'load-path "~/guiga_ws/src/euslime")
-(setq euslime-compile-path "~/.euslime_source")
+;; (add-to-list 'load-path "~/guiga_ws/src/euslime")
+;; (setq euslime-compile-path "~/.euslime_source")
 (setq-default tab-width 4 indent-tabs-mode nil)
 
-(require 'euslime-config)
-(setq inferior-euslisp-program "roseus")
-(slime-setup '(slime-fancy slime-banner slime-repl-ansi-color))
+;; (require 'euslime-config)
+;; (setq inferior-euslisp-program "roseus")
+;; (slime-setup '(slime-fancy slime-banner slime-repl-ansi-color))
 
 (setq package-check-signature nil)
 (custom-set-variables
