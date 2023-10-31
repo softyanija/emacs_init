@@ -15,6 +15,7 @@
 
 (global-set-key "\M-g" 'goto-line)
 (global-set-key "\C-h" 'backward-delete-char)
+(global-set-key "\M-e" 'replace-string)
 (global-linum-mode t)
 
 (setq rosdistro (getenv "ROS_DISTRO"))
@@ -92,28 +93,17 @@
 ;; (slime-setup '(slime-fancy slime-banner slime-repl-ansi-color))
 
 (setq package-check-signature nil)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (company-irony irony company lsp-mode))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 
-(add-hook 'python-mode-hook 'company-mode)
+(add-hook 'after-init-hook 'global-company-mode)
 
-(require 'irony)
-(add-hook 'c-mode-hook 'irony-mode)
-(add-hook 'c++-mode-hook 'irony-mode)
-(add-hook 'objc-mode-hook 'irony-mode)
-(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
-(eval-after-load 'company
-  '(add-to-list 'company-backends 'company-irony)) ; backend追加
+
+;; (require 'irony)
+;; (add-hook 'c-mode-hook 'irony-mode)
+;; (add-hook 'c++-mode-hook 'irony-mode)
+;; (add-hook 'objc-mode-hook 'irony-mode)
+;; (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+;; (eval-after-load 'company
+;;   '(add-to-list 'company-backends 'company-irony)) ; backend追加
 
 ;(require 'py-autopep8)
 ;(define-key python-mode-map (kbd "C-c F") 'py-autopep8) ; バッファ全体のコード整形
@@ -121,3 +111,15 @@
 
 ;; 保存時にバッファ全体を自動整形する
 ;;(add-hook 'before-save-hook 'py-autopep8-before-save)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages (quote (company))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
